@@ -4,10 +4,10 @@
 
 // Constants for roaster names and sprite URLs
 const BATTLER_1_NAME = 'Mass';
-const BATTLER_1_SPRITE_URL = 'https://play.rosebud.ai/assets/Mass.png?flZh';
+const BATTLER_1_SPRITE_URL = '/assets/Mass.png?flZh';
 
 const BATTLER_2_NAME = 'Jass';
-const BATTLER_2_SPRITE_URL = 'https://play.rosebud.ai/assets/Jass.png?KE4P';
+const BATTLER_2_SPRITE_URL = '/assets/Jass.png?KE4P';
 
 // END OF EASY-MODIFY VALUES
 //////////////////////////////////////////////////////////////
@@ -36,19 +36,19 @@ class RoastScene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('stage_bg', 'https://play.rosebud.ai/assets/bg_02_prod.png?bFb2');
-        this.load.image('style_overlay', 'https://play.rosebud.ai/assets/bg_02_style_tint_overlay_prod.png?RaCj');
+        this.load.image('stage_bg', '/assets/bg_02_prod.png?bFb2');
+        this.load.image('style_overlay', '/assets/bg_02_style_tint_overlay_prod.png?RaCj');
         this.load.image(battler1.name, battler1.spriteURL);
         this.load.image(battler2.name, battler2.spriteURL);
 
         // Load custom font
-        this.load.bitmapFont('monocraft', 'https://play.rosebud.ai/assets/monocraft.png?oWXw', 'https://play.rosebud.ai/assets/monocraft.xml?OXun');
+        this.load.bitmapFont('monocraft', '/assets/monocraft.png?oWXw', '/assets/monocraft.xml?OXun');
         // Load music tracks
-        this.load.audio('music1', 'https://play.rosebud.ai/assets/04-Ingame-Rock2-loop.mp3?c0Uu');
-        this.load.audio('music2', 'https://play.rosebud.ai/assets/05-Ingame-Rock3-loop.mp3?5YQe');
-        this.load.audio('music3', 'https://play.rosebud.ai/assets/06-Ingame-PowerMetal-loop.mp3?aQ0E');
-        this.load.audio('music4', 'https://play.rosebud.ai/assets/07-Ingame-ElectroMetal-loop.mp3?QlOn');
-        this.load.audio('lowHealthMusic', 'https://play.rosebud.ai/assets/08-Ingame-BlackMetal-AlvaMajo-loop.mp3?dYmx');
+        this.load.audio('music1', '/assets/04-Ingame-Rock2-loop.mp3?c0Uu');
+        this.load.audio('music2', '/assets/05-Ingame-Rock3-loop.mp3?5YQe');
+        this.load.audio('music3', '/assets/06-Ingame-PowerMetal-loop.mp3?aQ0E');
+        this.load.audio('music4', '/assets/07-Ingame-ElectroMetal-loop.mp3?QlOn');
+        this.load.audio('lowHealthMusic', '/assets/08-Ingame-BlackMetal-AlvaMajo-loop.mp3?dYmx');
     }
 
     async create() {
