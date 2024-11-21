@@ -1,0 +1,2 @@
+# MassVersusJass_LethalLips
+ Step into the fiery showdown of words where wit is sharper than any blade! In Mass vs. Jass: Lethal Lips, two fierce Japanese warrior women trade verbal jabs in a battle of sass, style, and searing roasts. Armed with sharp tongues and scandalous style, they’ll fight to see who truly reigns supreme. Are you ready to join the ultimate clash of words? Let the roast battles begin!
