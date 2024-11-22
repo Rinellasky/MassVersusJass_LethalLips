@@ -475,8 +475,8 @@ class RoastScene extends Phaser.Scene {
     }
 }
 
-import Phaser from 'phaser';
-import ChatManager from './chat_manager'; // Assuming ChatManager is in chat_manager.js
+//import Phaser from 'phaser';
+//import ChatManager from './chat_manager'; // Assuming ChatManager is in chat_manager.js
 // ... other imports
 
 //class RoastScene extends Phaser.Scene {
