@@ -36,13 +36,13 @@ class RoastScene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('stage_bg', '/assets/bg_02_prod.png?bFb2');
-        this.load.image('style_overlay', '/assets/bg_02_style_tint_overlay_prod.png?RaCj');
+        this.load.image('stage_bg', '/assets/bg_02_prod.png');
+        this.load.image('style_overlay', 'https://github.com/Rinellasky/MassVersusJass_LethalLips/blob/485d30b81b9be45fa2fb0df0d00f0b52f1d17523/dist/assets/bg_02_style_tint_overlay_prod.png?raw=true');
         this.load.image(battler1.name, battler1.spriteURL);
         this.load.image(battler2.name, battler2.spriteURL);
 
         // Load custom font
-        this.load.bitmapFont('monocraft', '/assets/monocraft.png?oWXw', '/assets/monocraft.xml?OXun');
+        this.load.bitmapFont('monocraft', '/assets/monocraft.png', '/assets/monocraft.xml');
         // Load music tracks
         this.load.audio('music1', '/assets/04-Ingame-Rock2-loop.mp3?c0Uu');
         this.load.audio('music2', '/assets/05-Ingame-Rock3-loop.mp3?5YQe');
