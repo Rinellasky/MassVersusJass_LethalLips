@@ -24,6 +24,9 @@ class Battler {
 const battler1 = new Battler(BATTLER_1_NAME, BATTLER_1_SPRITE_URL);
 const battler2 = new Battler(BATTLER_2_NAME, BATTLER_2_SPRITE_URL);
 
+import Phaser from 'phaser';
+import ChatManager from './chat_manager'; // Assuming ChatManager is in chat_manager.js
+
 class RoastScene extends Phaser.Scene {
     constructor() {
         super({
@@ -33,21 +36,33 @@ class RoastScene extends Phaser.Scene {
         this.footage_mode = false; // Toggle for footage mode, default is false
         this.isMessageShowing = false; // Flag to indicate if a message is being shown
         this.currentTurn = 0; // 0 for battler1, 1 for battler2
+
+    init(data) {
+        this.baseUrl = data.baseUrl; // Receive baseUrl from the game config
+        }
     }
 
     preload() {
-        this.load.image('stage_bg', '/assets/bg_02_prod.png');
-        this.load.image('style_overlay', 'https://github.com/Rinellasky/MassVersusJass_LethalLips/blob/main/dist/assets/bg_02_style_tint_ovelay_prod.png');
-        this.load.image(battler1.name, battler1.spriteURL);
+        // Load images
+        // Load images using baseUrl
+        this.load.image('stage_bg', this.baseUrl + 'assets/bg_02_prod.png?v=1');
+        this.load.image('style_overlay', this.baseUrl + 'assets/bg_02_style_tint_ovelay_prod.png?v=1'); // Corrected path from ('style_overlay', '/assets/bg_02_style_tint_ovelay_prod.png')
+        this.load.image(battler1.name, battler1.spriteURL); // These might need baseUrl too, depending on their source
         this.load.image(battler2.name, battler2.spriteURL);
 
-        // Load custom font
-        this.load.bitmapFont('monocraft', '/assets/monocraft.png', '/assets/monocraft.xml');
-        // Load music tracks
-        this.load.audio('music1', '/assets/04-Ingame-Rock2-loop.mp3');
-        this.load.audio('music2', '/assets/05-Ingame-Rock3-loop.mp3');
-        this.load.audio('music3', '/assets/06-Ingame-PowerMetal-loop.mp3');
-        this.load.audio('music4', '/assets/07-Ingame-ElectroMetal-loop.mp3');
+        // Load font previousMethod-->this.load.bitmapFont('monocraft', '/assets/monocraft.png', '/assets/monocraft.xml');
+
+        // Load custom font using baseUrl and specifying the type
+        this.load.bitmapFont('monocraft', this.baseUrl + 'assets/monocraft.png?v=1', this.baseUrl + 'assets/monocraft.xml?v=1');
+
+        // Load music
+        const musicTracks = [
+            '/assets/04-Ingame-Rock2-loop.mp3',
+            '/assets/05-Ingame-Rock3-loop.mp3',
+            '/assets/06-Ingame-PowerMetal-loop.mp3',
+            '/assets/07-Ingame-ElectroMetal-loop.mp3'
+        ];
+        musicTracks.forEach((track, index) => this.load.audio(`music${index + 1}`, track));
         this.load.audio('lowHealthMusic', '/assets/08-Ingame-BlackMetal-AlvaMajo-loop.mp3');
     }
 
@@ -464,30 +479,30 @@ import Phaser from 'phaser';
 import ChatManager from './chat_manager'; // Assuming ChatManager is in chat_manager.js
 // ... other imports
 
-class RoastScene extends Phaser.Scene {
+//class RoastScene extends Phaser.Scene {
   // ... (class properties and constructor remain the same)
 
-    init(data) {
-        this.baseUrl = data.baseUrl; // Receive baseUrl from the game config
-    }
+    //init(data) {
+        //this.baseUrl = data.baseUrl; // Receive baseUrl from the game config
+    //}
 
-    preload() {
+    //preload() {
         // Load images using baseUrl
-        this.load.image('stage_bg', this.baseUrl + 'assets/bg_02_prod.png?v=1');
-        this.load.image('style_overlay', this.baseUrl + 'assets/bg_02_style_tint_ovelay_prod.png?v=1');
-        this.load.image(battler1.name, battler1.spriteURL); // These might need baseUrl too, depending on their source
-        this.load.image(battler2.name, battler2.spriteURL);
+        //this.load.image('stage_bg', this.baseUrl + 'assets/bg_02_prod.png?v=1');
+        //this.load.image('style_overlay', this.baseUrl + 'assets/bg_02_style_tint_ovelay_prod.png?v=1');
+        //this.load.image(battler1.name, battler1.spriteURL); // These might need baseUrl too, depending on their source
+        //this.load.image(battler2.name, battler2.spriteURL);
 
         // Load custom font using baseUrl and specifying the type
-        this.load.bitmapFont('monocraft', this.baseUrl + 'assets/monocraft.png?v=1', this.baseUrl + 'assets/monocraft.xml?v=1');
+        //this.load.bitmapFont('monocraft', this.baseUrl + 'assets/monocraft.png?v=1', this.baseUrl + 'assets/monocraft.xml?v=1');
 
         // Load music tracks using baseUrl
-        this.load.audio('music1', this.baseUrl + 'assets/04-Ingame-Rock2-loop.mp3?v=1');
+        //this.load.audio('music1', this.baseUrl + 'assets/04-Ingame-Rock2-loop.mp3?v=1');
         // ... (load other music tracks similarly)
-    }
+    //}
 
     // ... (rest of the class remains the same)
-}
+//}
 
 
 // Example usage:javascript
