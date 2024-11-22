@@ -37,7 +37,7 @@ class RoastScene extends Phaser.Scene {
 
     preload() {
         this.load.image('stage_bg', '/assets/bg_02_prod.png');
-        this.load.image('style_overlay', 'https://github.com/Rinellasky/MassVersusJass_LethalLips/blob/485d30b81b9be45fa2fb0df0d00f0b52f1d17523/dist/assets/bg_02_style_tint_overlay_prod.png?raw=true');
+        this.load.image('style_overlay', https://github.com/Rinellasky/MassVersusJass_LethalLips/blob/main/dist/assets/bg_02_style_tint_ovelay_prod.png');
         this.load.image(battler1.name, battler1.spriteURL);
         this.load.image(battler2.name, battler2.spriteURL);
 
