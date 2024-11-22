@@ -44,11 +44,11 @@ class RoastScene extends Phaser.Scene {
         // Load custom font
         this.load.bitmapFont('monocraft', '/assets/monocraft.png', '/assets/monocraft.xml');
         // Load music tracks
-        this.load.audio('music1', '/assets/04-Ingame-Rock2-loop.mp3?c0Uu');
-        this.load.audio('music2', '/assets/05-Ingame-Rock3-loop.mp3?5YQe');
-        this.load.audio('music3', '/assets/06-Ingame-PowerMetal-loop.mp3?aQ0E');
-        this.load.audio('music4', '/assets/07-Ingame-ElectroMetal-loop.mp3?QlOn');
-        this.load.audio('lowHealthMusic', '/assets/08-Ingame-BlackMetal-AlvaMajo-loop.mp3?dYmx');
+        this.load.audio('music1', '/assets/04-Ingame-Rock2-loop.mp3');
+        this.load.audio('music2', '/assets/05-Ingame-Rock3-loop.mp3');
+        this.load.audio('music3', '/assets/06-Ingame-PowerMetal-loop.mp3');
+        this.load.audio('music4', '/assets/07-Ingame-ElectroMetal-loop.mp3');
+        this.load.audio('lowHealthMusic', '/assets/08-Ingame-BlackMetal-AlvaMajo-loop.mp3');
     }
 
     async create() {
