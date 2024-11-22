@@ -36,11 +36,11 @@ class RoastScene extends Phaser.Scene {
         this.footage_mode = false; // Toggle for footage mode, default is false
         this.isMessageShowing = false; // Flag to indicate if a message is being shown
         this.currentTurn = 0; // 0 for battler1, 1 for battler2
-
+    }
     init(data) {
         this.baseUrl = data.baseUrl; // Receive baseUrl from the game config
-        }
     }
+    
 
     preload() {
         // Load images
