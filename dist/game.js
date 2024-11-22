@@ -475,36 +475,6 @@ class RoastScene extends Phaser.Scene {
     }
 }
 
-//import Phaser from 'phaser';
-//import ChatManager from './chat_manager'; // Assuming ChatManager is in chat_manager.js
-// ... other imports
-
-//class RoastScene extends Phaser.Scene {
-  // ... (class properties and constructor remain the same)
-
-    //init(data) {
-        //this.baseUrl = data.baseUrl; // Receive baseUrl from the game config
-    //}
-
-    //preload() {
-        // Load images using baseUrl
-        //this.load.image('stage_bg', this.baseUrl + 'assets/bg_02_prod.png?v=1');
-        //this.load.image('style_overlay', this.baseUrl + 'assets/bg_02_style_tint_ovelay_prod.png?v=1');
-        //this.load.image(battler1.name, battler1.spriteURL); // These might need baseUrl too, depending on their source
-        //this.load.image(battler2.name, battler2.spriteURL);
-
-        // Load custom font using baseUrl and specifying the type
-        //this.load.bitmapFont('monocraft', this.baseUrl + 'assets/monocraft.png?v=1', this.baseUrl + 'assets/monocraft.xml?v=1');
-
-        // Load music tracks using baseUrl
-        //this.load.audio('music1', this.baseUrl + 'assets/04-Ingame-Rock2-loop.mp3?v=1');
-        // ... (load other music tracks similarly)
-    //}
-
-    // ... (rest of the class remains the same)
-//}
-
-
 // Example usage:javascript
 /**
  * Preloads assets like backgrounds, character sprites, fonts, and music tracks for the RoastScene.

@@ -5,6 +5,32 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "node",
+            "request": "launch",
+            "name": "Server",
+            "program": "${workspaceFolder}/server.js"
+        },
+
+        // Configuration for launching the "Client" application using Node.js.
+        // Specifies the program to run and includes a server ready action.
+        // The server ready action opens the application externally and does not terminate the server when stopped.
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Client",
+            "program": "${workspaceFolder}/client.js",
+            "serverReadyAction":{
+                "action": "openExternally",
+                "killOnServerStop": false
+            }
+
+        },
+        
+        // Configuration for launching web applications using Microsoft Edge and Google Chrome.
+        // Each configuration specifies the browser type, launch request, target URL, and the web root directory.
+        // The URL is set to 'http://localhost:8080', and the web root is defined by the workspace folder.
+        {
+            
             "name": "Launch Edge",
             "type": "msedge",
             "request": "launch",
