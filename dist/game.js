@@ -494,6 +494,8 @@ class RoastScene extends Phaser.Scene {
 /**
  * Preloads assets like backgrounds, character sprites, fonts, and music tracks for the RoastScene.
  * Uses a baseUrl to construct the paths for all assets, ensuring flexibility in asset location.
+ * This revised code uses the provided initGame function signature, centralizes asset loading through baseUrl, and improves asset management. 
+ * It also addresses potential cross-origin issues and includes cache-busting for better update management. Remember to replace placeholders like './chat_manager' with the actual paths to your modules.
  */
 function initGame(container, config) {
     const game = new Phaser.Game({
